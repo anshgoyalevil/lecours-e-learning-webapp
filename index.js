@@ -393,7 +393,7 @@ io.on("connection", (socket) => {
   });
 
 ////////////////////////////////////////////////Socket.io Requests End///////////////////////////////////////////////
-
-server.listen(3000, function () {
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, function () {
     console.log("App successfully spinned up on port 3000");
 });
