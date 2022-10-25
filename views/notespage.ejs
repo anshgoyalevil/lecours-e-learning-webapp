@@ -1,48 +1,32 @@
 <div class="bg-white dark:bg-gray-900">
+
+
+  <!-- ========== Start Header Section ========== -->
   <%- include("header") %>
+  <!-- ========== End Header Section ========== -->
   
   
+    <!-- ========== Start Notes Submit Form ========== -->
     
     <form class="lg:ml-96 lg:mr-96 ml-2 mr-2" method="POST" action="/submit">
       <div class="mb-1 mt-10">
         <input type="text" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Title" name="title" required>
         <input type="hidden" name="pg" value="np">
-    </div>
-    <div class="mb-4 w-full bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
-      <div class="py-2 px-4 bg-white rounded-t-lg dark:bg-gray-800">
-        <textarea id="body" rows="4" class="px-0 w-full text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="What would you like to share...." required name="body"></textarea>
       </div>
-      <div class="flex justify-between items-center py-2 px-3 border-t dark:border-gray-600">
-        <button type="submit" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 hover:bg-blue-800">
-          Add
-        </button>
-        <div class="flex pl-0 space-x-1 sm:pl-2">
+      <div class="mb-4 w-full bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
+        <div class="py-2 px-4 bg-white rounded-t-lg dark:bg-gray-800">
+          <textarea id="body" rows="4" class="px-0 w-full text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="What would you like to share...." required name="body"></textarea>
+        </div>
+        <div class="flex justify-between items-center py-2 px-3 border-t dark:border-gray-600">
+          <button type="submit" class="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-blue-200 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 hover:bg-blue-800">
+            Add
+          </button>
+          <div class="flex pl-0 space-x-1 sm:pl-2">
+          </div>
         </div>
       </div>
-    </div>
-  </form>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    </form>
+    <!-- ========== End Notes Submit Form ========== -->
   
   
   <div class="container mt-4 mx-auto mb-40">
@@ -69,8 +53,6 @@
     </div>
   
         <% } %> 
-      
-      
     
     <!-- ========== Cards ========== -->
   
@@ -81,6 +63,8 @@
   </div>
   </div>
   
+  <!-- ========== Start Footer Section ========== -->
   <%- include("footer") %>
+  <!-- ========== End Footer Section ========== -->
   </div>
   
