@@ -306,13 +306,18 @@ app.post("/register", function (req, res) {
 });
 
 //Post request for "/login" route
-app.post("/login", function (req, res) {
+app.post("/login", async function (req, res) {
     //Create user object from the login form data
     const user = new User({
         username: req.body.username,
         password: req.body.password,
     });
-    req.login(user, function (err) {
+    const userExist = await User.find({username: req.body.username});
+    if (userExist.length <= 0){
+        res.redirect("/register");
+    }
+    else{
+       req.login(user, function (err) {
         if (err) {
             console.log(err);
         }
@@ -322,7 +327,9 @@ app.post("/login", function (req, res) {
                 res.redirect("/courses");
             });
         }
-    });
+    }); 
+    }
+    
 });
 
 //Post request for "/submit" route
