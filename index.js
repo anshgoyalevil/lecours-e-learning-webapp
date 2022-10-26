@@ -73,10 +73,11 @@ const userSchema = new mongoose.Schema({
 
 //Single Course Model Schema for MongoDB (Mongoose)
 const courseSchema = new mongoose.Schema({
-    cid: Number,
+    cid: String,
     name: String,
     image: String,
     desc: String,
+    videoUrl: String,
 });
 
 //Compiling Single Course Schema into Course Model
@@ -84,17 +85,19 @@ const Course = new mongoose.model("Course", courseSchema);
 
 //Demo Courses JSON Objects
 const appDev = new Course({
-    cid: 2,
+    cid: "abcd",
     name: "The Complete App Developers Bootcamp",
     image: "https://img.freepik.com/free-vector/web-developers-courses-computer-programming-web-design-script-coding-study-computer-science-student-learning-interface-structure-components_335657-2542.jpg",
-    desc: "Learn app development by the industry experts and get hands on experience"
+    desc: "Learn app development by the industry experts and get hands on experience",
+    videoUrl: "",
 });
 
 const webDev = new Course({
-    cid: 1,
+    cid: "efgh",
     name: "The Complete Web Developers Bootcamp",
     image: "https://www.learnatrise.in/wp-content/uploads/2019/01/full-stack-web-development-course.png",
-    desc: "Learn web development by the industry experts and get hands on experience"
+    desc: "Learn web development by the industry experts and get hands on experience",
+    videoUrl: "",
 });
 
 // Comment out below two lines to prevent addition of duplicate course objects into MongoDB.
@@ -224,6 +227,18 @@ app.get("/courses/:room", function (req, res) {
     if (req.isAuthenticated()) {
         //Render "coursePage" page if user is logged-in
         res.render("coursePage");
+    }
+});
+
+//Get request for a course's page (Room)
+app.get("/add-video", function (req, res) {
+    //Check if user is authenticated
+    if (req.isAuthenticated()) {
+        //Render "coursePage" page if user is logged-in
+        res.render("addCourse");
+    }
+    else{
+        res.redirect("/login");
     }
 });
 
@@ -386,6 +401,31 @@ app.post("/delete", function (req, res) {
     }
 
 });
+
+//Post request for "/add-video" route
+app.post("/add-video", function (req, res) {
+    //Check if user is authenticated
+    if (req.isAuthenticated()) {
+        const submittedVideoName = req.body.videoName;
+        const submittedVideoUrl = req.body.videoUrl;
+        const submittedImageUrl = req.body.imageUrl;
+        const submittedVideoDsc = req.body.videoDsc;
+        //Create JSON object for a single course object
+        const newObj = new Course({
+            cid: uniqid(), //Unique ID will be generated using the Uniqid NPM Module
+            name: submittedVideoName,
+            image: submittedImageUrl,
+            desc: submittedVideoDsc,
+            videoUrl: submittedVideoUrl,
+        });
+        //Save newly created object to database
+        newObj.save();
+    }
+    else {
+        res.redirect("/login");
+    }
+});
+
 
 //Run when client connects
 io.on("connection", (socket) => {
