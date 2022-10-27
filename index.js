@@ -229,6 +229,7 @@ app.get("/courses/:room", function (req, res) {
         res.render("coursePage");
     }
     else{
+        //Redirect to "/login" page if user is not logged-in
         res.redirect("/login");
     }
 });
@@ -241,6 +242,7 @@ app.get("/add-video", function (req, res) {
         res.render("addCourse");
     }
     else{
+        //Redirect to "/login" page if user is not logged-in
         res.redirect("/login");
     }
 });
