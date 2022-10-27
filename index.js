@@ -228,6 +228,9 @@ app.get("/courses/:room", function (req, res) {
         //Render "coursePage" page if user is logged-in
         res.render("coursePage");
     }
+    else{
+        res.redirect("/login");
+    }
 });
 
 //Get request for a course's page (Room)
