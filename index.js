@@ -420,6 +420,7 @@ app.post("/add-video", function (req, res) {
         });
         //Save newly created object to database
         newObj.save();
+        res.redirect("/courses");
     }
     else {
         res.redirect("/login");
