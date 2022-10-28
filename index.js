@@ -259,6 +259,11 @@ app.get("/logout", function (req, res) {
     });
 });
 
+//Get reqest for "/contact" route
+app.get("/contact", function (req, res) { 
+    res.render("contact");
+ });
+
 var files = [];
 var i = 0;
 var score = -1;
