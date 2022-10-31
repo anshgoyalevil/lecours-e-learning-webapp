@@ -5,13 +5,25 @@ const userList = document.getElementById('users');
 const videoPlayer = document.getElementsByClassName("videoPlayer");
 
 // Get username and room from URL
-const { username, room, videoUrl } = Qs.parse(location.search, {
+const { username, room, videoUrl, sessionId } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-console.log({username, room, videoUrl });
+var sid = parseInt(sessionId);
 
+console.log({username, room, videoUrl, sessionId });
+
+//Set src attribute to the video player model
 videoPlayer[0].setAttribute("src", videoUrl);
+
+//Verify the recieved hash and calculated hash
+var sessionIdNew = 0;
+for(var i = 0; i<username.length; i++){
+  sessionIdNew = sessionIdNew+(username.charCodeAt(i)*i);
+}
+if(sessionIdNew!==sid){
+  window.location.replace("/");
+}
 
 const socket = io();
 

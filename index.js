@@ -195,10 +195,16 @@ app.get("/courses", async function (req, res) {
     if (req.isAuthenticated()) {
         const courses = await Course.find({});
         const username = req.user.name;
+        //Creat unique session id to prevent username morphing in URL
+        var sessionId = 0;
+        for(var i = 0; i<username.length; i++){
+            sessionId = sessionId+(username.charCodeAt(i)*i);
+        }
         //Render "courses" page if user is logged-in
         res.render("courses", {
             courses: courses,
-            username: username
+            username: username,
+            sessionId: sessionId
         });
     }
     else {
