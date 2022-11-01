@@ -60,10 +60,10 @@ API_KEY=api key from deepai.com
 DB_URI=mongodb database uri
 ```
 
-Now, inside the project terminal, run:
-```
-npm install
-```
+Inside the project terminal, 
+- run: ```npm install```
+- after the above command is executed, run ```node index.js```
+- now, open up a browser window, and type ```127.0.0.1:3000``` to test the application.
 
 Congrats, you are ready to test this web application into your local machine.
 
