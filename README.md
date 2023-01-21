@@ -8,6 +8,21 @@ Highlights:
 - The web app contains a note taking feature, with which, the students can take notes while learning the course.
 - The app is implemented with industry best password protection strategy with multiple salt rounds and hashing function implemented internally using bcrypt. It also contains Google OAuth2.0 Authentication Implementation for faster and secure logins.
 
+## Installation
+
+Please refer to the [installation docs here](https://github.com/anshgoyalevil/Linker/blob/master/installation.md).
+
+## How to start contributing to this project?
+
+The Linker project is built by the community for the community. We welcome contributions from everyone, especially new contributors.
+
+You can help with Linker's development in many ways, including art, coding, design and documentation.
+
+Developers: please [see this wiki page](https://github.com/anshgoyalevil/Linker/blob/master/installation.md) for instructions on how to set things up and commit changes.
+All other contributors: please see our [general contributor guidelines](https://github.com/anshgoyalevil/Linker/blob/master/contribution.md).
+
+## Check out some [screenshots of the application here](https://github.com/anshgoyalevil/Linker/blob/master/preview.md)
+
 ## Frontend Technologies Used:-
 - Socketio
 - HTML
@@ -46,30 +61,6 @@ Following Node Modules are used:
 - multer - for handling file uploads
 - deepai - for using the deepai image computing API
 - fs - for working with file system in node
-
-## How to test the app?
-
-Download the project or git clone it into your local machine.
-
-Inside the Project Folder, Create a file named .env and assign the following values in it:
-```
-SECRET=anyrandomstring
-CLIENT_ID=google auth 2.0 cliend id
-CLIENT_SECRET=google auth 2.0 client secret
-API_KEY=api key from deepai.com
-DB_URI=mongodb database uri
-```
-
-Inside the project terminal, 
-- run: ```npm install```
-- after the above command is executed, run ```node index.js```
-- now, open up a browser window, and type ```127.0.0.1:3000``` to test the application.
-
-Congrats, you are ready to test this web application into your local machine.
-
-Feel free to fork it, star it, or send pull requests.
-
-Some Screenshots of the Web App:
 
 ![a](https://github.com/anshgoyalevil/e-learning-system-design/blob/master/public/a.PNG)
 ![b](https://github.com/anshgoyalevil/e-learning-system-design/blob/master/public/b.PNG)
