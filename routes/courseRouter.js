@@ -12,6 +12,6 @@ router.get("/courses/:room", courseController.getCustomCourse);
 router.get("/add-video", courseController.getAddVideoPage);
 
 //Post request for "/add-video" route
-router.post("/add-video", );
+router.post("/add-video", courseController.postAddVideo);
 
 module.exports = router;
