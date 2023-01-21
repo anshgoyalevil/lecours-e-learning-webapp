@@ -10,18 +10,18 @@ Highlights:
 
 ## Installation
 
-Please refer to the [installation docs here](https://github.com/anshgoyalevil/Linker/blob/master/installation.md).
+Please refer to the [installation docs here](https://github.com/anshgoyalevil/lecours-e-learning-webapp/blob/master/installation.md).
 
 ## How to start contributing to this project?
 
-The Linker project is built by the community for the community. We welcome contributions from everyone, especially new contributors.
+The lecours-e-learning-webapp project is built by the community for the community. We welcome contributions from everyone, especially new contributors.
 
-You can help with Linker's development in many ways, including art, coding, design and documentation.
+You can help with lecours-e-learning-webapp's development in many ways, including art, coding, design and documentation.
 
-Developers: please [see this wiki page](https://github.com/anshgoyalevil/Linker/blob/master/installation.md) for instructions on how to set things up and commit changes.
-All other contributors: please see our [general contributor guidelines](https://github.com/anshgoyalevil/Linker/blob/master/contribution.md).
+Developers: please [see this wiki page](https://github.com/anshgoyalevil/lecours-e-learning-webapp/blob/master/installation.md) for instructions on how to set things up and commit changes.
+All other contributors: please see our [general contributor guidelines](https://github.com/anshgoyalevil/lecours-e-learning-webapp/blob/master/contribution.md).
 
-## Check out some [screenshots of the application here](https://github.com/anshgoyalevil/Linker/blob/master/preview.md)
+## Check out some [screenshots of the application here](https://github.com/anshgoyalevil/lecours-e-learning-webapp/blob/master/preview.md)
 
 ## Frontend Technologies Used:-
 - Socketio
